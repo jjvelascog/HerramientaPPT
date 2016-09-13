@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabAddIns" label="MATRIX">
+        <!--GRUPO BULLETS-->
+        <group id="grpBullets" label="Bullets" getImage="GetImage">
+          <button id="btnOp3" onAction="btnGeneral" size="large" label="Insertar texto" getImage="GetImage" supertip="Inserta un cuadro de texto con Bullets en tres niveles según el tamaño de letra elegido." tag="12-11-10" />
+          <button id="btnDarformato" onAction="btnGeneral" label="Dar formato" size="large" getImage="GetImage" supertip="Da formato de Bullets y/o ajusta los tamaños de letra." getEnabled="GetEnabled" />
+	</group>
+        <!--GRUPO INSERTAR OBJETOS-->
+        <group id="grpPredet" label="Insertar objetos"  getImage="GetImage">
+          <button id="btnTake" label="Conclusión" size="large" getImage="GetImage" onAction="btnGeneral" supertip="Inserta un Takeaway para la conclusión de la lámina." />
+          <button id="btnNotaAlPie" label="Nota al pie" size="large" getImage="GetImage" onAction="btnGeneral" supertip="Inserta un nota al pie en la parte inferior de la lámina." />
+          <menu id="men_disclaimer" label="Disclaimer" size="large" getImage="GetImage" supertip="Inserta un Disclaimer">
+            <menuSeparator id="msDerecha" title="Disclaimer a la derecha"/>
+            <button id="btnD_pd_D" onAction="btnGeneral" label="PARA DISCUSIÓN" getImage="GetImage" />
+            <button id="btnD_Pr_D" onAction="btnGeneral" label="PRELIMINAR" getImage="GetImage" />
+            <button id="btnD_Ne_D" onAction="btnGeneral" label="NO EXHAUSTIVO" getImage="GetImage" />
+            <button id="btnD_Il_D" onAction="btnGeneral" label="ILUSTRATIVO" getImage="GetImage" />
+            <button id="btnD_EJ_D" onAction="btnGeneral" label="EJEMPLO" getImage="GetImage" />
+            <button id="btnD_Cn_D" onAction="btnGeneral" label="CONFIDENCIAL" getImage="GetImage" />
+            <button id="btnD_Bk_D" onAction="btnGeneral" label="BACK-UP" getImage="GetImage" />
+            <button id="btnD_Ot_D" onAction="btnGeneral" label="Otro..." getImage="GetImage" />
+            <menuSeparator id="msIzquierda" title="Disclaimer a la izquierda"/>
+            <button id="btnD_pd_I" onAction="btnGeneral" label="PARA DISCUSIÓN" getImage="GetImage" />
+            <button id="btnD_Pr_I" onAction="btnGeneral" label="PRELIMINAR" getImage="GetImage" />
+            <button id="btnD_Ne_I" onAction="btnGeneral" label="NO EXHAUSTIVO" getImage="GetImage" />
+            <button id="btnD_Il_I" onAction="btnGeneral" label="ILUSTRATIVO" getImage="GetImage" />
+            <button id="btnD_EJ_I" onAction="btnGeneral" label="EJEMPLO" getImage="GetImage" />
+            <button id="btnD_Cn_I" onAction="btnGeneral" label="CONFIDENCIAL" getImage="GetImage" />
+            <button id="btnD_Bk_I" onAction="btnGeneral" label="BACK-UP" getImage="GetImage" />
+            <button id="btnD_Ot_I" onAction="btnGeneral" label="Otro..." getImage="GetImage" />
+          </menu>
+	  <button id="btnTitulo" label="Titulo" size="large" getImage="GetImage" onAction="btnGeneral" supertip="Inserta un título con una linea abajo." />
+	  <button id="btnCallout" label="Callout" size="large" getImage="GetImage" onAction="btnGeneral" supertip="Inserta un callout." />
+          <button id="btnGhostSimple" onAction="btnGeneral" label="Ghost" getImage="GetImage"  size="large"
+                  supertip="Genera un fantasma de los objetos seleccionados en la esquina superior derecha." getEnabled="GetEnabled"/>
+	  <menu id="men_calendario" label="Calendario" size="large" getImage="GetImage" supertip="Inserta un calenadario de 4 o 5 semanas, comenzando en el día ingresado">
+	    <button id="btnCalendario4" onAction="btnGeneral" label="4 semanas" getImage="GetImage" />
+	    <button id="btnCalendario5" onAction="btnGeneral" label="5 semanas" getImage="GetImage" />
+	  </menu>
+	  <menu id="men_cajas" label="Cajas" size="normal" getImage="GetImage" supertip="Inserta la cantidad de cajas seleccionadas">
+	    <button id="btnCajas2" onAction="btnGeneral" label="2 cajas" getImage="GetImage" />
+	    <button id="btnCajas3" onAction="btnGeneral" label="3 cajas" getImage="GetImage" />
+	    <button id="btnCajas4" onAction="btnGeneral" label="4 cajas" getImage="GetImage" />
+	  </menu>
+          <menu id="men_cn" label="Círculos" size="normal" getImage="GetImage" supertip="Inserta una serie de círculos numerados">
+            <button id="btncn3" onAction="btnGeneral" label="1...3" getImage="GetImage" />
+            <button id="btncn10" onAction="btnGeneral" label="1...10" getImage="GetImage" />
+            <button id="btncniii" onAction="btnGeneral" label="I...III" getImage="GetImage" />
+            <button id="btncnx" onAction="btnGeneral" label="I...X" getImage="GetImage" />
+          </menu>
+	  <menu id="men_estados" label="Estados" size="normal" getImage="GetImage" supertip="Inserta iconos de estados">
+	    <button id="btnIgual" onAction="btnGeneral" label="No comenzado" getImage="GetImage" />
+	    <button id="btnCheckBlanco" onAction="btnGeneral" label="En curso" getImage="GetImage" />
+	    <button id="btnCheck" onAction="btnGeneral" label="Completado" getImage="GetImage" />
+	    <button id="btnExclamacion" onAction="btnGeneral"  label="Alerta" getImage="GetImage" />
+	    <button id="btnCruz" onAction="btnGeneral" label="Atrasado" getImage="GetImage" />
+	  </menu>
+	  </group>
+        <!--GRUPO MODIFICAR OBJETOS-->
+        <group id="grpAjustar" label="Modificar objetos" getImage="GetImage">
+          <button id="btnAncho" onAction="btnGeneral" label="Mismo ancho" size="large" tag="anc" getImage="GetImage"
+                  supertip="Asigna a una selección de objetos el mismo ancho del primer objeto seleccionado." getEnabled="GetEnabled" />
+          <button id="btnAlto" onAction="btnGeneral" label="Mismo alto" size="large" tag="alt" getImage="GetImage"
+                  supertip="Asigna a una selección de objetos el mismo alto del primer objeto seleccionado." getEnabled="GetEnabled" />
+          <button id="btnEmpalmaH" onAction="btnGeneral" label="Empalmar (Horizontal)" size="normal" tag="alt" getImage="GetImage"
+                  supertip="Ajusta la posición de los objetos para empalmarlos horizontalmente." getEnabled="GetEnabled" />
+          <button id="btnEmpalmaV" onAction="btnGeneral" label="Empalmar (Vertical)" size="normal" tag="alt" getImage="GetImage"
+                  supertip="Ajusta la posición de los objetos para empalmarlos verticalmente." getEnabled="GetEnabled" />
+          <button id="btnCopyPos" onAction="btnGeneral" label="Copiar posiciones" size="normal" tag="alt" getImage="GetImage"
+                  supertip="Copia la posicion de los objetos en el orden que fueron seleccionados." getEnabled="GetEnabled" />
+          <button id="btnPastePos" onAction="btnGeneral" label="Pegar posiciones" size="normal" tag="alt" getImage="GetImage"
+                  supertip="Asigna la posicion previamente copiada de los objetos en el orden que fueron seleccionados." getEnabled="GetEnabled" />
+          <button id="btnChangePos" onAction="btnGeneral" label="Cambiar posiciones" size="normal" tag="alt" getImage="GetImage"
+                  supertip="Intercambia las posiciones de los dos objetos seleccionados." getEnabled="GetEnabled" />  
+	</group>
+        <!--GRUPO AJUSTAR ESPACIADO-->
+        <group id="grpAjustarEspaciado" label="Ajustar espaciado" getImage="GetImage">
+        <buttonGroup id="btngrEspaciadoV">
+          <button id="btnAddEspaciadoV" onAction="btnGeneral" getImage="GetImage" 
+                  supertip="Aumenta el espaciado vertical entre los objetos ajustando el alto de cada uno." getEnabled="GetEnabled"/>
+          <button id="btnSubEspaciadoV" onAction="btnGeneral" getImage="GetImage" label="Vertical" 
+                  supertip="Reduce el espaciado vertical entre los objetos ajustando el alto de cada uno." getEnabled="GetEnabled"/>
+        </buttonGroup>
+        <buttonGroup id="btngrEspaciadoH">
+          <button id="btnAddEspaciadoH" onAction="btnGeneral" getImage="GetImage" 
+                  supertip="Aumenta el espaciado horizontal entre los objetos ajustando el ancho de cada uno." getEnabled="GetEnabled" />
+          <button id="btnSubEspaciadoH" onAction="btnGeneral" getImage="GetImage" label="Horizontal" 
+                  supertip="Reduce el espaciado horizontal entre los objetos ajustando el ancho de cada uno." getEnabled="GetEnabled" />
+        </buttonGroup>   
+        </group>
+        <!--GRUPO OTROS (Destacar, sombrear y seleccionar similares)-->
+        <group id="grpDestacarSombrear" label="Otros" getImage="GetImage" >
+          <button id="btnDestacar" onAction="btnGeneral" label="Destacar" getImage="GetImage"  size="normal"
+                  supertip="Destaca los objetos seleccionados con un cuadro punteado. Agrega un elemento de convenciones" getEnabled="GetEnabled"/>
+          <button id="btnSombrear" onAction="btnGeneral" label="Sombrear" getImage="GetImage" size="normal"
+                  supertip="Sombrea los objetos seleccionados con un cuadro blanco semi-transparente."
+                  getEnabled="GetEnabled"/>
+	  <button id="btnSeleccionarSim" onAction="btnGeneral" label="Similares" getImage="GetImage"  size="normal"
+                  supertip="Selecciona los objetos similares en forma, color y/o tamaño." getEnabled="GetEnabled"/>
+        </group>
+	<!--GRUPO Agenda-->
+        <group id="grpAgenda" label="Agenda de reunión" getImage="GetImage" >
+          <button id="btnCrearAgenda" onAction="btnGeneral" label="Crear/Actualizar" getImage="GetImage"  size="normal"
+                  supertip="Crea una diapositiva de agenda y la copia para crear secciones de cada elemento de la agenda." getEnabled="GetEnabled"/>
+          <button id="btnActualizarAgenda" onAction="btnGeneral" label="Actualización rápida" getImage="GetImage" size="normal"
+                  supertip="Actualiza la agenda previamente creada con cambios realizados a la diapositiva base."
+                  getEnabled="GetEnabled"/>
+          <button id="btnEliminarAgenda" onAction="btnGeneral" label="Eliminar" getImage="GetImage" size="normal"
+                  supertip="Elimina la agenda previamente creada."
+                  getEnabled="GetEnabled"/>
+        </group>
+        <!--GRUPO CONFIGURACION-->
+        <group id="grpConfig" label="Configuración"  getImage="GetImage">
+          <button id="btnConfig" onAction="btnGeneral" label="Configuración" getImage="GetImage"  size="normal"
+                  supertip="Configurar la Barra Matrix" />
+	  <button id="btnAbrirTemplate" onAction="btnGeneral" label="Template" getImage="GetImage" size="normal"
+                  supertip="Abre el template de láminas."
+                  getEnabled="GetEnabled"/>
+	  <button id="btnMostrarHistoria" onAction="btnGeneral" label="Historia" getImage="GetImage" size="normal"
+                  supertip="Abre el template de láminas."
+                  getEnabled="GetEnabled"/>
+        </group>
+
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
